@@ -27,6 +27,7 @@ jobs:
       - name: Push To main
         working-directory: ./lib # 指定下面指令运行的目录
         run: |
+          git config --global init.defaultBranch main
           git init
           git checkout -b main
           git add -A
