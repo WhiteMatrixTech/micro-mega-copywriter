@@ -25,7 +25,7 @@ jobs:
           yarn codegen
 
       - name: Push To main
-        working-directory: lib # 指定下面指令运行的目录
+        working-directory: ./lib # 指定下面指令运行的目录
         run: |
           git init
           git checkout -b main
