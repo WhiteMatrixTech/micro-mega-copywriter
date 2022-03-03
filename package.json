@@ -1,0 +1,23 @@
+{
+  "name": "micro-mega-copywriter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jsonGen.js",
+  "scripts": {
+    "codegen": "node jsonGen.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhiteMatrixTech/micro-mega-copywriter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WhiteMatrixTech/micro-mega-copywriter/issues"
+  },
+  "homepage": "https://github.com/WhiteMatrixTech/micro-mega-copywriter#readme",
+  "dependencies": {
+    "xlsx": "^0.18.2"
+  }
+}

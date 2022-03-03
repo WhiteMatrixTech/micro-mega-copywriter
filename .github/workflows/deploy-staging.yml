@@ -1,0 +1,33 @@
+name: JSON Generate
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: codeGen
+        run: |
+          yarn
+          yarn codegen
+
+      - name: Merge staging -> main
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: staging
+          target_branch: main
+          github_token: ${{ github.TOKEN }}
