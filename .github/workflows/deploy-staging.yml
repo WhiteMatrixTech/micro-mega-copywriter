@@ -34,7 +34,7 @@ jobs:
 
           git -c user.name='WKlili' -c user.email='18136225579@163.com' commit -m 'update'
 
-          git remote add origin https://${{ github.TOKEN }}@github.com/WhiteMatrixTech/micro-mega-copywrite.git
+          git remote add origin https://${{github.TOKEN}}@github.com/WhiteMatrixTech/micro-mega-copywrite.git
 
           git push origin main -f -q
 
