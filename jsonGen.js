@@ -33,4 +33,4 @@ const parseData = data.map(item => {
     }
 })
 
-fs.writeFile("./index.ts", fileGenTemplate(parseData), () => {});
+fs.writeFile("./lib/index.ts", fileGenTemplate(parseData), () => {});
