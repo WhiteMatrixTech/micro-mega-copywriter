@@ -24,10 +24,16 @@ jobs:
           yarn
           yarn codegen
 
-      - name: Merge staging -> main
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: staging
-          target_branch: main
-          github_token: ${{ github.TOKEN }}
+      - name: Push To main
+        working-directory: ./index.ts # 指定下面指令运行的目录
+        run: |
+          git init
+          git checkout -b main
+          git add -A
+
+          git -c user.name='WKlili' -c user.email='18136225579@163.com' commit -m 'update'
+
+          git remote add origin https://${{ github.TOKEN }}@github.com:WhiteMatrixTech/micro-mega-copywrite.git
+
+          git push origin main -f -q
+
